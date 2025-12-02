@@ -2,20 +2,81 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "メイリオ";
+  font-family: "Meiryo","Hiragino Sans",sans-serif;
 }
 
-.container{
-  width:1008px;
-  margin: 0 auto;
+@media (min-width: 640px) {
+  .visible-sp {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .visible-pc {
+    display: none;
+  }
 }
 
-.subtitle{
-  background-color: #00A0E9;
+.container {
+  width: 91%;
+  margin-inline: auto;
+}
+@media (min-width: 640px) {
+  .container {
+    width: min(60%, 1200px);
+  }
 }
 
-.subtitle-text{
-  color:#fff;
+.subtitle {
+  background-color: #00a0e9;
+}
+
+.subtitle-text {
+  color: #fff;
   font-size: 14px;
-  padding-block: 0.5em;
+  padding: 0.5em;
+}
+
+.header__logo{
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.header__contact{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tel-link{
+  background-color: #F39800;
+  color: #fff;
+  border-radius: 0.5em;
+  text-decoration: none;
+  width: 48%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2em 0.3em;
+}
+.tel-link svg{
+  vertical-align: middle;
+}
+
+.reserve-link{
+  background-color: #F39800;
+  color: #fff;
+  border-radius: 0.5em;
+  text-decoration: none;
+  width: 48%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2em 0.3em;
+  gap: 0.2em;
+}
+.reserve-link svg{
+  vertical-align: middle;
 }

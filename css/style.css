@@ -2,17 +2,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Meiryo","Hiragino Sans",sans-serif;
+  font-family: "Meiryo", "Hiragino Sans", sans-serif;
 }
 
 @media (min-width: 640px) {
   .visible-sp {
-    display: none;
+    display: none !important;
   }
 }
 @media (max-width: 640px) {
   .visible-pc {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -36,20 +36,20 @@
   padding: 0.5em;
 }
 
-.header__logo{
+.header__logo {
   width: 50%;
   height: auto;
   display: block;
   margin: 1rem auto;
 }
 
-.header__contact{
+.header__contact {
   display: flex;
   justify-content: space-between;
 }
 
-.tel-link{
-  background-color: #F39800;
+.tel-link {
+  background-color: #f39800;
   color: #fff;
   border-radius: 0.5em;
   text-decoration: none;
@@ -60,12 +60,12 @@
   align-items: center;
   padding: 0.2em 0.3em;
 }
-.tel-link svg{
+.tel-link svg {
   vertical-align: middle;
 }
 
-.reserve-link{
-  background-color: #F39800;
+.reserve-link {
+  background-color: #f39800;
   color: #fff;
   border-radius: 0.5em;
   text-decoration: none;
@@ -77,6 +77,85 @@
   padding: 0.2em 0.3em;
   gap: 0.2em;
 }
-.reserve-link svg{
+.reserve-link svg {
   vertical-align: middle;
+}
+
+/* ハンバーガーメニュー */
+/* ハンバーガーボタン高さ調整 */
+.header-nav-wrapper,
+.header-nav {
+  height: 42px;
+}
+/* ハンバーガーボタンのベース */
+.header-nav__toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #f03636;
+  background-color: #fff;
+  z-index: 9999;
+  position: relative;
+}
+/* 3本線 */
+.hamburger-line {
+  position: absolute;
+  background-color: #f03636;
+  width: 50%;
+  height: 3px;
+  left: 10px;
+  transition: 0.3s ease;
+  border-radius: 10px;
+}
+/* 各線の位置 */
+.hamburger-line:nth-child(1) {
+  top: 12px;
+}
+.hamburger-line:nth-child(2) {
+  top: 19px;
+}
+.hamburger-line:nth-child(3) {
+  top: 26px;
+}
+/* 開いたときの三本線 */
+.header-nav__toggle.is-active .hamburger-line {
+  width: 60%;
+  height: 2px;
+  left: 8px;
+}
+.header-nav__toggle.is-active .hamburger-line:nth-child(1) {
+  top: 20px;
+  transform: rotate(45deg);
+}
+.header-nav__toggle.is-active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.header-nav__toggle.is-active .hamburger-line:nth-child(3) {
+  top: 20px;
+  transform: rotate(-45deg);
+}
+/* メニュー全体 */
+.header-nav__menu {
+  position: fixed;
+  top: 120px;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 9998;
+  overflow: scroll;
+}
+/* 開いたときのメニュー */
+.header-nav__menu.is-open {
+  transform: translateX(0);
+}
+/* メニュー内のリンク */
+.header__menu-list {
+  list-style: none;
+}
+.header-nav__menu a {
+  text-decoration: none;
+  color: #000;
 }

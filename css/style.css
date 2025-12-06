@@ -90,7 +90,7 @@
 /* ハンバーガーボタン高さ調整 */
 .header-nav-wrapper,
 .header-nav {
-  height: 42px;
+  height: auto;
 }
 /* ハンバーガーボタンのベース */
 .header-nav__toggle {
@@ -100,7 +100,7 @@
   z-index: 9999;
   position: relative;
   border: none;
-  margin-top: 1rem;
+  margin-block: 1rem;
 }
 /* 3本線 */
 .hamburger-line {
@@ -154,6 +154,7 @@
 .header__menu-list {
   list-style: none;
   padding-block: 1rem;
+  margin-left: .5rem;
 }
 .header__menu-list li+li{
   margin-top: 1rem;
@@ -170,4 +171,8 @@
   width: 1em;
   height: 1em;
   margin-right: .5em;
+}
+.hero{
+  width: 100%;
+  height: auto;
 }

@@ -112,14 +112,27 @@
   align-items: center;
   padding: 0.2em 0.3em;
   gap: 0.2em;
+  border: 2px solid #f39800;
+  transition: 0.3s;
 }
 @media (min-width: 640px) {
   .reserve-link {
     font-size: 20px;
   }
 }
+.reserve-link:hover {
+  background-color: #fff;
+  color: #f39800;
+  font-weight: 600;
+}
 .reserve-link svg {
   vertical-align: middle;
+}
+.reserve-link:hover path {
+  color: #f39800;
+}
+.reserve-link:active {
+  transform: translate(4px, 4px);
 }
 
 /* ハンバーガーメニュー */
@@ -250,6 +263,7 @@
   align-items: center;
   font-size: 24px;
   font-weight: 700;
+  transition: 0.3s;
 }
 @media (min-width: 640px) {
   .header__menu-item a {
@@ -259,6 +273,9 @@
     display: block;
     text-align: center;
   }
+}
+.header__menu-item a:hover {
+  color: #00a0e9;
 }
 .header__menu-item img {
   width: 1em;

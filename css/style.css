@@ -461,24 +461,64 @@ header {
   }
 }
 
+/* メインコンタクトセクション */
+.main__contact {
+  display: flex;
+  background-color: #fff;
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid #ccc;
+}
+
+.main__cta {
+  text-align: center;
+  margin-top: 1.5rem;
+  position: relative;
+}
+.main-cta::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 2.5rem; /* ← この「中途半端な長さ」を明示的に管理 */
+  background-color: #ccc;
+}
+.main__cta a {
+  text-decoration: none;
+  background-color: #f39800;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+.main__cta svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+
 /* サイドバー */
 .sidebar__reserve-link {
   width: 100%;
   font-size: 1.3rem;
   margin-top: 2rem;
 }
-.sidebar__heading-ttl{
+.sidebar__heading-ttl {
   background-color: #fff;
   font-size: 22px;
   margin-top: 1rem;
 }
 @media (min-width: 640px) {
-  .sidebar__heading-ttl{
+  .sidebar__heading-ttl {
     margin-top: 2rem;
     background-color: #f5f5f5;
   }
 }
-.sidebar__heading-ttl::before{
+.sidebar__heading-ttl::before {
   margin: 0;
 }
 .sidebar__movie iframe {
@@ -488,9 +528,10 @@ header {
 }
 @media (min-width: 640px) {
   .sidebar__info img {
-    box-shadow: 0px 4px 6px #ccc;}
+    box-shadow: 0px 4px 6px #ccc;
+  }
 }
-.sidebar__address{
+.sidebar__address {
   font-style: normal;
 }
 .sidebar__address p {

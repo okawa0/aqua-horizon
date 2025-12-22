@@ -538,3 +538,26 @@ header {
 .sidebar__address p {
   margin-top: 0.5rem;
 }
+
+.sidebar__blog {
+  margin-bottom: 2rem;
+}
+
+.sidebar__blog-head {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar__blog-head + .sidebar__blog-head {
+  margin-top: 1rem;
+}
+
+.sidebar__blog-head p {
+  color: #00a0e9;
+}
+
+.sidebar__blog-title {
+  text-decoration: underline;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}

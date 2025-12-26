@@ -639,3 +639,13 @@ header {
     font-size: 14px;
   }
 }
+
+.sidebar__cta-link {
+  display: inline-block;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
+.sidebar__tel{
+  letter-spacing: .2em;
+}

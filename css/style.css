@@ -640,10 +640,11 @@ header {
   }
 }
 
-.sidebar__cta-link {
+.main__cta .sidebar__cta-link {
   display: inline-block;
   width: 100%;
   border-radius: 0.3rem;
+  font-size: 1.6em;
 }
 
 .sidebar__tel {
@@ -664,6 +665,7 @@ header {
   #global-nav-footer {
     width: 100%;
     background-color: #00a0e9;
+    box-shadow: none;
   }
   #global-nav-footer .header__menu-item {
     padding-block: 0.5em;
@@ -672,4 +674,65 @@ header {
     color: #fff;
     font-size: 14px;
   }
+}
+
+.footer__info {
+  display: flex;
+  align-items: center;
+  margin-block: 1rem;
+}
+
+@media (min-width: 640px) {
+  .footer__info {
+    margin-block: 3rem;
+    gap: 3rem;
+    justify-content: center;
+  }
+}
+
+.footer__logo {
+  margin: 0;
+}
+@media (min-width: 640px) {
+  .footer__logo {
+    width: 300px;
+  }
+}
+
+.footer__address-detail span,
+.footer__address-detail time {
+  font-size: 0.1em;
+}
+
+.tel-footer {
+  font-size: 0.3em;
+}
+.tel-footer span {
+  font-size: 3.5em;
+}
+@media (min-width: 640px) {
+  .footer__address{
+    width: auto;
+    margin: 0;
+  }
+  .footer__address-detail{
+    text-align: center;
+  }
+  .footer__address-detail span,
+  .footer__address-detail time {
+    font-size: 1em;
+  }
+
+  .tel-footer {
+    font-size: 1em;
+  }
+  .tel-footer span {
+    font-size: 1.6rem;
+  }
+}
+
+.copyright{
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
 }

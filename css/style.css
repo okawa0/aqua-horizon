@@ -368,10 +368,12 @@ header {
 .news-item span {
   color: #aaa;
 }
-.news-item p {
+.news-item a {
   color: #00a0e9;
   font-weight: 700;
   font-size: 22px;
+  display: block;
+  text-decoration: none;
 }
 .item-list-link {
   text-decoration: none;
@@ -563,7 +565,8 @@ header {
   margin-top: 1rem;
 }
 
-.sidebar__blog-head p {
+.sidebar__blog-head p,
+.sidebar__blog-head a {
   color: #00a0e9;
 }
 

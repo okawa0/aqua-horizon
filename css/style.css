@@ -53,6 +53,7 @@ header {
   color: #fff;
   font-size: 14px;
   padding: 0.5em;
+  font-weight: 400;
 }
 
 /* タイトル＋予約 */
@@ -715,11 +716,11 @@ header {
   font-size: 3.5em;
 }
 @media (min-width: 640px) {
-  .footer__address{
+  .footer__address {
     width: auto;
     margin: 0;
   }
-  .footer__address-detail{
+  .footer__address-detail {
     text-align: center;
   }
   .footer__address-detail span,
@@ -735,13 +736,13 @@ header {
   }
 }
 
-.copyright{
+.copyright {
   text-align: center;
   font-size: 0.8rem;
   margin-bottom: 2rem;
 }
 @media (min-width: 640px) {
-  .copyright{
+  .copyright {
     font-size: 1rem;
     margin-top: 2rem;
     margin-bottom: 3rem;

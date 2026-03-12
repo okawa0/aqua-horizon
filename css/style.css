@@ -44,6 +44,9 @@ body {
 
 header {
   background-color: #fff;
+  z-index: 1000;
+  position: sticky;
+  top: -45px;
 }
 /* 水色バーサブタイトル */
 .subtitle {
@@ -86,6 +89,8 @@ header {
 .heading {
   margin-inline: auto;
   width: 91%;
+  z-index: 2000;
+  background-color: #fff;
 }
 @media (min-width: 640px) {
   .heading {
@@ -93,6 +98,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding-block: 1rem;
+    background-color: #fff;
   }
 }
 .header__logo {
@@ -253,7 +259,7 @@ header {
   height: 0;
   background: #fff;
   transition: height 0.3s ease;
-  z-index: 9998;
+  z-index: 999;
   overflow: hidden;
   /* margin-bottom: 1rem; */
 }

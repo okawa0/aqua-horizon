@@ -346,8 +346,10 @@ header {
   }
 }
 .hero-img {
-  height: auto;
-  width: 100%;
+  height: 300px;
+  width: 1200px;
+  object-fit: cover;
+  margin: 0 auto;
 }
 @media (min-width: 640px) {
   .hero img {

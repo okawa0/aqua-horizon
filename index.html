@@ -8,14 +8,22 @@
       content="沖縄でのスキューバダイビング体験を提供するサイトです。"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/menu.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="js/menu.js" defer></script>
   </head>
 
   <body>
@@ -121,16 +129,57 @@
         </ul>
       </nav>
       <div class="hero">
-        <img
-          src="img/hero-sp.webp"
-          alt="スキューバダイビングをしている様子"
-          class="hero-img visible-sp"
-        />
-        <img
-          src="img/hero-pc.webp"
-          alt="スキューバダイビングをしている様子"
-          class="hero-img visible-pc"
-        />
+        <div class="swiper-container mySwiper-sp visible-sp">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="img/hero-sp1.webp"
+                alt="スキューバダイビングSP1"
+                class="hero-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/hero-sp2.webp"
+                alt="スキューバダイビングSP2"
+                class="hero-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/hero-sp3.webp"
+                alt="スキューバダイビングSP3"
+                class="hero-img"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper hero__slider visible-pc" data-js="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="img/hero-pc1.webp"
+                alt="スキューバダイビングPC1"
+                class="hero-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/hero-pc2.webp"
+                alt="スキューバダイビングPC2"
+                class="hero-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/hero-pc3.webp"
+                alt="スキューバダイビングPC3"
+                class="hero-img"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container">

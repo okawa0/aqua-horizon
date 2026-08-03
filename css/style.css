@@ -17,7 +17,8 @@ img {
     display: none !important;
   }
 }
-@media (max-width: 640px) {
+/* min-width と max-width が 640px ちょうどで同時に一致しないよう 639.98px にする */
+@media (max-width: 639.98px) {
   .visible-pc {
     display: none !important;
   }
@@ -107,6 +108,9 @@ header {
   display: block;
   margin: 1rem auto;
 }
+.header__logo img {
+  width: 100%;
+}
 @media (min-width: 640px) {
   .header__logo {
     width: 20%;
@@ -139,7 +143,7 @@ header {
   width: 280px;
   margin-right: 1rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023.98px) {
   .header__address {
     margin: 0 auto;
     text-align: center;
@@ -304,6 +308,9 @@ header {
   .header__menu-item {
     border-inline: 1px solid #ddd;
     flex: 1;
+    /* min-width の初期値 auto では min-content 未満に縮まず、
+       640〜760px あたりでラベルが overflow: hidden に切られる */
+    min-width: 0;
     text-align: center;
     padding-block: 1em;
   }
@@ -320,7 +327,6 @@ header {
 @media (min-width: 640px) {
   .header__menu-item a {
     font-weight: 600;
-    white-space: nowrap;
     font-size: clamp(0.8rem, 1.2vw, 1.2rem);
     display: block;
     text-align: center;
@@ -364,7 +370,9 @@ header {
 @media (min-width: 640px) {
   .layout {
     display: grid;
-    grid-template-columns: 1fr 300px;
+    /* 1fr は min-content 未満に縮まないため、狭い画面で横スクロールが出る。
+       minmax(0, 1fr) で縮小を許可する */
+    grid-template-columns: minmax(0, 1fr) 300px;
     gap: 2rem;
   }
 }
@@ -512,7 +520,7 @@ header {
   padding: 2rem;
   border: 1px solid #ccc;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023.98px) {
   .main__contact {
     flex-direction: column;
   }
@@ -740,14 +748,14 @@ header {
 
 .footer__address-detail span,
 .footer__address-detail time {
-  font-size: 0.1em;
+  font-size: 0.75rem;
 }
 
 .tel-footer {
-  font-size: 0.3em;
+  font-size: 0.75rem;
 }
 .tel-footer span {
-  font-size: 3.5em;
+  font-size: 1.25rem;
 }
 @media (min-width: 640px) {
   .footer__address {
@@ -759,11 +767,11 @@ header {
   }
   .footer__address-detail span,
   .footer__address-detail time {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .tel-footer {
-    font-size: 1em;
+    font-size: 1rem;
   }
   .tel-footer span {
     font-size: 1.6rem;

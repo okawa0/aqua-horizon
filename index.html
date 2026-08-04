@@ -24,6 +24,7 @@
       defer
     ></script>
     <script src="js/menu.js" defer></script>
+    <script src="js/tab-nav.js" defer></script>
   </head>
 
   <body>
@@ -94,38 +95,80 @@
       <nav id="global-nav" class="global-nav">
         <ul class="header__menu-list">
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />トップ</a
+            <a href="./" class="nav-link" data-panel="top"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />トップ</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />店舗</a
+            <a href="#store" class="nav-link" data-panel="store"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />店舗</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />コース一覧</a
+            <a href="#courses" class="nav-link" data-panel="courses"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />コース一覧</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />スタッフ</a
+            <a href="#staff" class="nav-link" data-panel="staff"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />スタッフ</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />お客様の声</a
+            <a href="#voice" class="nav-link" data-panel="voice"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />お客様の声</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />Q&A</a
+            <a href="#faq" class="nav-link" data-panel="faq"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />Q&amp;A</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />お問合せ</a
+            <a href="#contact" class="nav-link" data-panel="contact"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />お問合せ</a
             >
           </li>
         </ul>
@@ -192,145 +235,631 @@
     <div class="container">
       <main class="layout">
         <div class="main-content">
-          <section class="news-section">
-            <h2 class="heading-ttl">新着情報</h2>
-            <div class="news-item">
-              <span>2025年12月1日</span>
-              <a href="#">ホームページをリニューアルしました。</a>
-            </div>
-            <div class="news-item">
-              <span>2025年11月1日</span>
-              <a href="#">安全対策強化に伴う最新器材導入のお知らせ</a>
-            </div>
-            <div class="news-item">
-              <span>2025年10月1日</span>
-              <a href="#">初心者向け体験ダイビングコースを新設しました。</a>
-            </div>
-            <a href="#" class="item-list-link"
-              >新着情報一覧へ<svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path
-                  d="M9 6l6 6-6 6"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                /></svg
-            ></a>
-          </section>
-          <section class="course-section">
-            <h2 class="heading-ttl">人気のコース</h2>
-            <p class="course-intro">
-              当店の人気コースをご紹介します。<br />経験豊富なインストラクターがガイドしますので、お楽しみいただけます！
-            </p>
-            <div class="course-cards">
-              <a href="#"
-                ><img
+          <div id="panel-top" class="panel" data-panel="top">
+            <section class="news-section">
+              <h2 class="heading-ttl">新着情報</h2>
+              <div class="news-item">
+                <span>2025年12月1日</span>
+                <a href="#">ホームページをリニューアルしました。</a>
+              </div>
+              <div class="news-item">
+                <span>2025年11月1日</span>
+                <a href="#">安全対策強化に伴う最新器材導入のお知らせ</a>
+              </div>
+              <div class="news-item">
+                <span>2025年10月1日</span>
+                <a href="#">初心者向け体験ダイビングコースを新設しました。</a>
+              </div>
+              <a href="#" class="item-list-link"
+                >新着情報一覧へ<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M9 6l6 6-6 6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+              ></a>
+            </section>
+            <section class="course-section">
+              <h2 class="heading-ttl">人気のコース</h2>
+              <p class="course-intro">
+                当店の人気コースをご紹介します。<br />経験豊富なインストラクターがガイドしますので、お楽しみいただけます！
+              </p>
+              <div class="course-cards">
+                <a href="#"
+                  ><img
                   src="img/course-1.webp"
                   alt="スキューバダイビングする様子"
-              /></a>
-              <a href="#"
-                ><img src="img/course-2.webp" alt="暗い海からの景色"
-              /></a>
-              <a href="#"
-                ><img src="img/course-3.webp" alt="ウミガメが泳ぐ様子"
-              /></a>
+                  width="464"
+                  height="520"
+                  loading="lazy"
+                /></a>
+                <a href="#"
+                  ><img
+                  src="img/course-2.webp"
+                  alt="暗い海からの景色"
+                  width="464"
+                  height="520"
+                  loading="lazy"
+                /></a>
+                <a href="#"
+                  ><img
+                  src="img/course-3.webp"
+                  alt="ウミガメが泳ぐ様子"
+                  width="464"
+                  height="520"
+                  loading="lazy"
+                /></a>
+              </div>
+            </section>
+            <section class="voice-section">
+              <h2 class="heading-ttl">お客様の声</h2>
+              <div class="voice-cards">
+                <div class="voice-card">
+                  <img
+                    src="img/voice-1.webp"
+                    alt="お客様の写真"
+                    class="voice-img"
+                    width="356"
+                    height="356"
+                    loading="lazy"
+                  />
+                  <div class="voice-content">
+                    <p class="voice-title">最高の思い出になりました。</p>
+                    <p class="voice-text">
+                      透明度の高い海と色鮮やかな魚に感動しました。スタッフの方も丁寧で、安心して楽しめました。
+                    </p>
+                    <span class="voice-course">2025年3月　青の洞窟コース</span>
+                  </div>
+                </div>
+                <div class="voice-card">
+                  <img
+                    src="img/voice-2.webp"
+                    alt="お客様の写真"
+                    class="voice-img"
+                    width="356"
+                    height="356"
+                    loading="lazy"
+                  />
+                  <div class="voice-content">
+                    <p class="voice-title">親切な指導で本当に楽しかったです。</p>
+                    <p class="voice-text">
+                      初めてでも分かりやすく教えてもらえました。不安なくダイビングに集中できました。
+                    </p>
+                    <span class="voice-course">2025年3月　入門コース</span>
+                  </div>
+                </div>
+                <div class="voice-card">
+                  <img
+                    src="img/voice-3.webp"
+                    alt="お客様の写真"
+                    class="voice-img"
+                    width="356"
+                    height="356"
+                    loading="lazy"
+                  />
+                  <div class="voice-content">
+                    <p class="voice-title">
+                      3回目の参加！毎回新たな発見があります。
+                    </p>
+                    <p class="voice-text">
+                      来るたびに違う海の表情を楽しめます。何度参加しても飽きない魅力があります。
+                    </p>
+                    <span class="voice-course">2025年3月　1日フリーコース</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="main__contact visible-pc">
+              <div class="header__address">
+                <div class="header__address-detail">
+                  <span>沖縄県那覇市南海町</span>
+                  <time>9:00 - 18:00</time>
+                </div>
+                <p class="tel">TEL<span>098-123-4567</span></p>
+              </div>
+              <div class="main__cta">
+                <a href="#"
+                  >お問い合わせはこちら<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="_x32_"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 512 512"
+                    xml:space="preserve"
+                  >
+                    <style type="text/css">
+                      .st0 {
+                        fill: #fff;
+                      }
+                    </style>
+                    <g>
+                      <path
+                        class="st0"
+                        d="M165.013,288.946h75.034c6.953,0,12.609,5.656,12.609,12.608v26.424c0,7.065,3.659,9.585,7.082,9.585   c2.106,0,4.451-0.936,6.78-2.702l90.964-69.014c3.416-2.589,5.297-6.087,5.297-9.844c0-3.762-1.881-7.259-5.297-9.849   l-90.964-69.014c-2.329-1.766-4.674-2.702-6.78-2.702c-3.424,0-7.082,2.519-7.082,9.584v26.425c0,6.952-5.656,12.608-12.609,12.608   h-75.034c-8.707,0-15.79,7.085-15.79,15.788v34.313C149.223,281.862,156.305,288.946,165.013,288.946z"
+                        style="fill: #fff"
+                      />
+                      <path
+                        class="st0"
+                        d="M256,0C114.842,0,0.002,114.84,0.002,256S114.842,512,256,512c141.158,0,255.998-114.84,255.998-256   S397.158,0,256,0z M256,66.785c104.334,0,189.216,84.879,189.216,189.215S360.334,445.215,256,445.215S66.783,360.336,66.783,256   S151.667,66.785,256,66.785z"
+                        style="fill: #fff"
+                      />
+                    </g></svg
+                ></a>
+              </div>
+            </section>
+          </div>
+          <div id="panel-store" class="panel" data-panel="store">
+            <h2 class="heading-ttl">店舗案内</h2>
+            <p class="panel-lead">
+              那覇空港から車で約20分。器材のレンタルから温水シャワー・更衣室まで完備していますので、手ぶらでお越しいただけます。
+            </p>
+            <img
+              src="img/shop.webp"
+              alt="青い扉が並ぶアクアホライズンの店舗外観"
+              class="store-photo"
+              width="686"
+              height="456"
+              loading="lazy"
+            />
+            <h3 class="panel-subhead">店舗情報</h3>
+            <dl class="info-list">
+              <div class="info-list__row">
+                <dt>店名</dt>
+                <dd>アクアホライズン</dd>
+              </div>
+              <div class="info-list__row">
+                <dt>住所</dt>
+                <dd>沖縄県那覇市南海町1-2-3 マリンビル1F</dd>
+              </div>
+              <div class="info-list__row">
+                <dt>電話番号</dt>
+                <dd><a href="tel:0981234567">098-123-4567</a></dd>
+              </div>
+              <div class="info-list__row">
+                <dt>営業時間</dt>
+                <dd>9:00 - 18:00</dd>
+              </div>
+              <div class="info-list__row">
+                <dt>定休日</dt>
+                <dd>年中無休（悪天候時は休業する場合があります）</dd>
+              </div>
+              <div class="info-list__row">
+                <dt>駐車場</dt>
+                <dd>あり（無料・8台）</dd>
+              </div>
+              <div class="info-list__row">
+                <dt>アクセス</dt>
+                <dd>ゆいレール「南海町駅」から徒歩5分／那覇空港から車で約20分</dd>
+              </div>
+            </dl>
+            <h3 class="panel-subhead">設備</h3>
+            <ul class="facility-list">
+              <li>温水シャワー</li>
+              <li>更衣室</li>
+              <li>器材レンタル</li>
+              <li>ドライヤー</li>
+              <li>無料Wi-Fi</li>
+              <li>ロッカー</li>
+            </ul>
+            <h3 class="panel-subhead">アクセスマップ</h3>
+            <div class="store-map">
+              <iframe
+                src="https://maps.google.com/maps?q=%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82&amp;output=embed"
+                title="アクアホライズン周辺の地図"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
             </div>
-          </section>
-          <section class="voice-section">
+          </div>
+          <div id="panel-courses" class="panel" data-panel="courses">
+            <h2 class="heading-ttl">コース一覧</h2>
+            <p class="panel-lead">
+              初心者向けの体験ダイビングから、ライセンスをお持ちの方向けのファンダイビングまでご用意しています。<br />ご不明な点はお気軽にお問い合わせください。
+            </p>
+            <ul class="course-list">
+                <li class="course-item">
+                  <article class="course-card">
+                    <img
+                      src="img/course-photo-1.webp"
+                      alt="上空から見た、透明な海を泳ぐダイバーたち"
+                      class="course-card__img"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                    />
+                    <div class="course-card__body">
+                      <p class="course-card__catch">初めてのスキューバダイビング</p>
+                      <h3 class="course-card__title">入門コース</h3>
+                      <p class="course-card__text">器材の使い方から呼吸の仕方まで、インストラクターがマンツーマンでお教えします。泳ぎに自信がない方でも安心してご参加いただけます。</p>
+                      <dl class="course-spec">
+                        <div class="course-spec__row">
+                          <dt>料金</dt>
+                          <dd>12,000円<span class="course-spec__note">（税込）</span></dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>所要時間</dt>
+                          <dd>約3時間</dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>対象</dt>
+                          <dd>10歳以上・泳げなくてもOK</dd>
+                        </div>
+                      </dl>
+                      <a href="#" class="course-card__link">詳細を見る</a>
+                    </div>
+                  </article>
+                </li>
+                <li class="course-item">
+                  <article class="course-card">
+                    <img
+                      src="img/course-photo-2.webp"
+                      alt="青い光に照らされた洞窟内の海"
+                      class="course-card__img"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                    />
+                    <div class="course-card__body">
+                      <p class="course-card__catch">神秘の青い光に包まれる</p>
+                      <h3 class="course-card__title">青の洞窟コース</h3>
+                      <p class="course-card__text">洞窟の内側から差し込む光が海を青く染める、沖縄でも屈指の人気ポイント。少人数制でゆっくりご案内します。</p>
+                      <dl class="course-spec">
+                        <div class="course-spec__row">
+                          <dt>料金</dt>
+                          <dd>14,000円<span class="course-spec__note">（税込）</span></dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>所要時間</dt>
+                          <dd>約4時間</dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>対象</dt>
+                          <dd>10歳以上・初心者歓迎</dd>
+                        </div>
+                      </dl>
+                      <a href="#" class="course-card__link">詳細を見る</a>
+                    </div>
+                  </article>
+                </li>
+                <li class="course-item">
+                  <article class="course-card">
+                    <img
+                      src="img/course-photo-3.webp"
+                      alt="ウミガメと一緒に泳ぐダイバー"
+                      class="course-card__img"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                    />
+                    <div class="course-card__body">
+                      <p class="course-card__catch">丸1日、沖縄の海を満喫</p>
+                      <h3 class="course-card__title">1日フリーコース</h3>
+                      <p class="course-card__text">午前と午後で異なるポイントを巡る、1日たっぷり潜れるコース。ランチ付きで、その日の海況に合わせて最適な場所へご案内します。</p>
+                      <dl class="course-spec">
+                        <div class="course-spec__row">
+                          <dt>料金</dt>
+                          <dd>22,000円<span class="course-spec__note">（税込）</span></dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>所要時間</dt>
+                          <dd>約7時間（ランチ付）</dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>対象</dt>
+                          <dd>ライセンス不要</dd>
+                        </div>
+                      </dl>
+                      <a href="#" class="course-card__link">詳細を見る</a>
+                    </div>
+                  </article>
+                </li>
+                <li class="course-item">
+                  <article class="course-card">
+                    <img
+                      src="img/course-photo-4.webp"
+                      alt="ウミガメと並んで泳ぐスノーケラー"
+                      class="course-card__img"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                    />
+                    <div class="course-card__body">
+                      <p class="course-card__catch">泳げなくても海の中へ</p>
+                      <h3 class="course-card__title">シュノーケリング体験</h3>
+                      <p class="course-card__text">ライフジャケットを着けて水面から海中をのぞくコース。小さなお子様やご年配の方にも人気です。</p>
+                      <dl class="course-spec">
+                        <div class="course-spec__row">
+                          <dt>料金</dt>
+                          <dd>6,500円<span class="course-spec__note">（税込）</span></dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>所要時間</dt>
+                          <dd>約2時間</dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>対象</dt>
+                          <dd>6歳以上</dd>
+                        </div>
+                      </dl>
+                      <a href="#" class="course-card__link">詳細を見る</a>
+                    </div>
+                  </article>
+                </li>
+                <li class="course-item">
+                  <article class="course-card">
+                    <img
+                      src="img/course-photo-5.webp"
+                      alt="沖縄の海に停泊するダイビングボート"
+                      class="course-card__img"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                    />
+                    <div class="course-card__body">
+                      <p class="course-card__catch">沖合のポイントへボートで</p>
+                      <h3 class="course-card__title">ボートファンダイビング</h3>
+                      <p class="course-card__text">ボートで沖合のポイントへ。ビーチからは行けない地形やドロップオフを楽しめる、経験者向けのコースです。</p>
+                      <dl class="course-spec">
+                        <div class="course-spec__row">
+                          <dt>料金</dt>
+                          <dd>18,000円<span class="course-spec__note">（税込）</span></dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>所要時間</dt>
+                          <dd>約5時間</dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>対象</dt>
+                          <dd>Cカード保持者</dd>
+                        </div>
+                      </dl>
+                      <a href="#" class="course-card__link">詳細を見る</a>
+                    </div>
+                  </article>
+                </li>
+                <li class="course-item">
+                  <article class="course-card">
+                    <img
+                      src="img/course-photo-6.webp"
+                      alt="色とりどりのサンゴ礁と熱帯魚の群れ"
+                      class="course-card__img"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                    />
+                    <div class="course-card__body">
+                      <p class="course-card__catch">カラフルな魚たちに会いに</p>
+                      <h3 class="course-card__title">サンゴ礁ウォッチング</h3>
+                      <p class="course-card__text">色とりどりのサンゴと熱帯魚が広がるポイントをのんびり周遊。水中写真の撮影サービス付きです。</p>
+                      <dl class="course-spec">
+                        <div class="course-spec__row">
+                          <dt>料金</dt>
+                          <dd>9,800円<span class="course-spec__note">（税込）</span></dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>所要時間</dt>
+                          <dd>約3時間</dd>
+                        </div>
+                        <div class="course-spec__row">
+                          <dt>対象</dt>
+                          <dd>8歳以上</dd>
+                        </div>
+                      </dl>
+                      <a href="#" class="course-card__link">詳細を見る</a>
+                    </div>
+                  </article>
+                </li>
+            </ul>
+          </div>
+          <div id="panel-staff" class="panel" data-panel="staff">
+            <h2 class="heading-ttl">スタッフ紹介</h2>
+            <p class="panel-lead">
+              経験豊富なガイドが、お客様の目的やレベルに合わせて海をご案内します。
+            </p>
+            <ul class="staff-list">
+                <li class="staff-item">
+                  <article class="staff-card">
+                    <!-- TODO: 写真は仮置き。実写に差し替える際は img/staff-1.webp を上書きする -->
+                    <img
+                      src="img/staff-1.webp"
+                      alt=""
+                      class="staff-card__img"
+                      width="400"
+                      height="400"
+                      loading="lazy"
+                    />
+                    <div class="staff-card__body">
+                      <p class="staff-card__role">代表 / インストラクター</p>
+                      <h3 class="staff-card__name">
+                        大城 海斗<span class="staff-card__kana">おおしろ かいと</span>
+                      </h3>
+                      <p class="staff-card__cert">PADI コースディレクター</p>
+                      <p class="staff-card__comment">沖縄の海に潜り続けて20年。初めての方が水中で見せる笑顔を見るのが、何よりの楽しみです。</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="staff-item">
+                  <article class="staff-card">
+                    <!-- TODO: 写真は仮置き。実写に差し替える際は img/staff-2.webp を上書きする -->
+                    <img
+                      src="img/staff-2.webp"
+                      alt=""
+                      class="staff-card__img"
+                      width="400"
+                      height="400"
+                      loading="lazy"
+                    />
+                    <div class="staff-card__body">
+                      <p class="staff-card__role">インストラクター</p>
+                      <h3 class="staff-card__name">
+                        比嘉 美咲<span class="staff-card__kana">ひが みさき</span>
+                      </h3>
+                      <p class="staff-card__cert">PADI マスターインストラクター</p>
+                      <p class="staff-card__comment">不安なことは何でも聞いてください。一人ひとりのペースに合わせてご案内します。</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="staff-item">
+                  <article class="staff-card">
+                    <!-- TODO: 写真は仮置き。実写に差し替える際は img/staff-3.webp を上書きする -->
+                    <img
+                      src="img/staff-3.webp"
+                      alt=""
+                      class="staff-card__img"
+                      width="400"
+                      height="400"
+                      loading="lazy"
+                    />
+                    <div class="staff-card__body">
+                      <p class="staff-card__role">ガイド</p>
+                      <h3 class="staff-card__name">
+                        新垣 拓真<span class="staff-card__kana">あらかき たくま</span>
+                      </h3>
+                      <p class="staff-card__cert">PADI ダイブマスター / 潜水士</p>
+                      <p class="staff-card__comment">地形ポイントが得意です。その日のベストな場所へお連れします。</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="staff-item">
+                  <article class="staff-card">
+                    <!-- TODO: 写真は仮置き。実写に差し替える際は img/staff-4.webp を上書きする -->
+                    <img
+                      src="img/staff-4.webp"
+                      alt=""
+                      class="staff-card__img"
+                      width="400"
+                      height="400"
+                      loading="lazy"
+                    />
+                    <div class="staff-card__body">
+                      <p class="staff-card__role">ガイド / 水中フォトグラファー</p>
+                      <h3 class="staff-card__name">
+                        金城 陽菜<span class="staff-card__kana">きんじょう はるな</span>
+                      </h3>
+                      <p class="staff-card__cert">PADI ダイブマスター</p>
+                      <p class="staff-card__comment">水中写真の撮影を担当しています。ベストな一枚を残しましょう。</p>
+                    </div>
+                  </article>
+                </li>
+            </ul>
+          </div>
+          <div id="panel-voice" class="panel" data-panel="voice">
             <h2 class="heading-ttl">お客様の声</h2>
+            <p class="panel-lead">
+              ご参加いただいたお客様からいただいた感想をご紹介します。
+            </p>
             <div class="voice-cards">
               <div class="voice-card">
                 <img
                   src="img/voice-1.webp"
-                  alt="お客様の写真"
+                  alt="ウミガメと一緒に泳ぐダイバー"
                   class="voice-img"
+                  width="356"
+                  height="356"
+                  loading="lazy"
                 />
                 <div class="voice-content">
                   <p class="voice-title">最高の思い出になりました。</p>
-                  <p class="voice-text">
-                    透明度の高い海と色鮮やかな魚に感動しました。スタッフの方も丁寧で、安心して楽しめました。
-                  </p>
+                  <p class="voice-text">透明度の高い海と色鮮やかな魚に感動しました。スタッフの方も丁寧で、安心して楽しめました。</p>
                   <span class="voice-course">2025年3月　青の洞窟コース</span>
                 </div>
               </div>
               <div class="voice-card">
                 <img
                   src="img/voice-2.webp"
-                  alt="お客様の写真"
+                  alt="器材を背負って並ぶ2人のダイバー"
                   class="voice-img"
+                  width="356"
+                  height="356"
+                  loading="lazy"
                 />
                 <div class="voice-content">
                   <p class="voice-title">親切な指導で本当に楽しかったです。</p>
-                  <p class="voice-text">
-                    初めてでも分かりやすく教えてもらえました。不安なくダイビングに集中できました。
-                  </p>
+                  <p class="voice-text">初めてでも分かりやすく教えてもらえました。不安なくダイビングに集中できました。</p>
                   <span class="voice-course">2025年3月　入門コース</span>
                 </div>
               </div>
               <div class="voice-card">
                 <img
                   src="img/voice-3.webp"
-                  alt="お客様の写真"
+                  alt="魚の群れの中を泳ぐダイバー"
                   class="voice-img"
+                  width="356"
+                  height="356"
+                  loading="lazy"
                 />
                 <div class="voice-content">
-                  <p class="voice-title">
-                    3回目の参加！毎回新たな発見があります。
-                  </p>
-                  <p class="voice-text">
-                    来るたびに違う海の表情を楽しめます。何度参加しても飽きない魅力があります。
-                  </p>
+                  <p class="voice-title">3回目の参加！毎回新たな発見があります。</p>
+                  <p class="voice-text">来るたびに違う海の表情を楽しめます。何度参加しても飽きない魅力があります。</p>
                   <span class="voice-course">2025年3月　1日フリーコース</span>
                 </div>
               </div>
-            </div>
-          </section>
-          <section class="main__contact visible-pc">
-            <div class="header__address">
-              <div class="header__address-detail">
-                <span>沖縄県那覇市南海町</span>
-                <time>9:00 - 18:00</time>
+              <div class="voice-card">
+                <img
+                  src="img/voice-4.webp"
+                  alt="ウミガメと並んで泳ぐスノーケラー"
+                  class="voice-img"
+                  width="356"
+                  height="356"
+                  loading="lazy"
+                />
+                <div class="voice-content">
+                  <p class="voice-title">家族みんなで楽しめました。</p>
+                  <p class="voice-text">小学生の子どもも一緒に参加できました。浅いところから丁寧に見てくださって助かりました。</p>
+                  <span class="voice-course">2025年4月　シュノーケリング体験</span>
+                </div>
               </div>
-              <p class="tel">TEL<span>098-123-4567</span></p>
+              <div class="voice-card">
+                <img
+                  src="img/voice-5.webp"
+                  alt="沖縄の海に停泊するダイビングボート"
+                  class="voice-img"
+                  width="356"
+                  height="356"
+                  loading="lazy"
+                />
+                <div class="voice-content">
+                  <p class="voice-title">ボートからのエントリーが最高でした。</p>
+                  <p class="voice-text">ビーチからは行けないポイントに連れて行ってもらえて、地形の迫力に圧倒されました。</p>
+                  <span class="voice-course">2025年5月　ボートファンダイビング</span>
+                </div>
+              </div>
+              <div class="voice-card">
+                <img
+                  src="img/voice-6.webp"
+                  alt="色とりどりのサンゴ礁と熱帯魚の群れ"
+                  class="voice-img"
+                  width="356"
+                  height="356"
+                  loading="lazy"
+                />
+                <div class="voice-content">
+                  <p class="voice-title">写真をたくさん撮っていただきました。</p>
+                  <p class="voice-text">自分では撮れない水中写真をその場で共有してもらえて、いい記念になりました。</p>
+                  <span class="voice-course">2025年5月　サンゴ礁ウォッチング</span>
+                </div>
+              </div>
             </div>
-            <div class="main__cta">
-              <a href="#"
-                >お問い合わせはこちら<svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  version="1.1"
-                  id="_x32_"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 512 512"
-                  xml:space="preserve"
-                >
-                  <style type="text/css">
-                    .st0 {
-                      fill: #fff;
-                    }
-                  </style>
-                  <g>
-                    <path
-                      class="st0"
-                      d="M165.013,288.946h75.034c6.953,0,12.609,5.656,12.609,12.608v26.424c0,7.065,3.659,9.585,7.082,9.585   c2.106,0,4.451-0.936,6.78-2.702l90.964-69.014c3.416-2.589,5.297-6.087,5.297-9.844c0-3.762-1.881-7.259-5.297-9.849   l-90.964-69.014c-2.329-1.766-4.674-2.702-6.78-2.702c-3.424,0-7.082,2.519-7.082,9.584v26.425c0,6.952-5.656,12.608-12.609,12.608   h-75.034c-8.707,0-15.79,7.085-15.79,15.788v34.313C149.223,281.862,156.305,288.946,165.013,288.946z"
-                      style="fill: #fff"
-                    />
-                    <path
-                      class="st0"
-                      d="M256,0C114.842,0,0.002,114.84,0.002,256S114.842,512,256,512c141.158,0,255.998-114.84,255.998-256   S397.158,0,256,0z M256,66.785c104.334,0,189.216,84.879,189.216,189.215S360.334,445.215,256,445.215S66.783,360.336,66.783,256   S151.667,66.785,256,66.785z"
-                      style="fill: #fff"
-                    />
-                  </g></svg
-              ></a>
-            </div>
-          </section>
+          </div>
+          <div id="panel-faq" class="panel" data-panel="faq">
+            <h2 class="heading-ttl">よくあるご質問</h2>
+            <p class="panel-placeholder">（このセクションの内容は準備中です）</p>
+          </div>
+          <div id="panel-contact" class="panel" data-panel="contact">
+            <h2 class="heading-ttl">お問合せ</h2>
+            <p class="panel-placeholder">（このセクションの内容は準備中です）</p>
+          </div>
         </div>
         <aside class="sidebar">
           <a href="#" class="reserve-link sidebar__reserve-link"
@@ -369,7 +898,13 @@
           </div>
           <div class="sidebar__info">
             <h2 class="heading-ttl sidebar__heading-ttl">店舗案内</h2>
-            <img src="img/shop 1.webp" alt="お店の外観" />
+            <img
+              src="img/shop.webp"
+              alt="アクアホライズンの店舗外観"
+              width="686"
+              height="456"
+              loading="lazy"
+            />
             <address class="sidebar__address">
               <p>098-123-4567</p>
               <p>沖縄県那覇市南海町</p>
@@ -399,13 +934,31 @@
           </div>
           <div class="sidebar__banner">
             <a href="#" class="banner">
-              <img src="img/banner.webp" alt="キャンペーンバナー" />
+              <img
+              src="img/banner.webp"
+              alt="キャンペーンバナー"
+              width="1712"
+              height="624"
+              loading="lazy"
+            />
             </a>
             <a href="#" class="banner">
-              <img src="img/banner2.webp" alt="キャンペーンバナー" />
+              <img
+              src="img/banner2.webp"
+              alt="キャンペーンバナー"
+              width="1712"
+              height="624"
+              loading="lazy"
+            />
             </a>
             <a href="#" class="banner">
-              <img src="img/banner3.webp" alt="キャンペーンバナー" />
+              <img
+              src="img/banner3.webp"
+              alt="キャンペーンバナー"
+              width="1712"
+              height="624"
+              loading="lazy"
+            />
             </a>
           </div>
           <div class="online-store">
@@ -502,38 +1055,80 @@
       <nav id="global-nav-footer" class="global-nav">
         <ul class="header__menu-list">
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />トップ</a
+            <a href="./" class="nav-link" data-panel="top"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />トップ</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />店舗</a
+            <a href="#store" class="nav-link" data-panel="store"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />店舗</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />コース一覧</a
+            <a href="#courses" class="nav-link" data-panel="courses"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />コース一覧</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />スタッフ</a
+            <a href="#staff" class="nav-link" data-panel="staff"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />スタッフ</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />お客様の声</a
+            <a href="#voice" class="nav-link" data-panel="voice"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />お客様の声</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />Q&A</a
+            <a href="#faq" class="nav-link" data-panel="faq"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />Q&amp;A</a
             >
           </li>
           <li class="header__menu-item">
-            <a href="#"
-              ><img src="img/icon-arrow.png" class="visible-sp" />お問合せ</a
+            <a href="#contact" class="nav-link" data-panel="contact"
+              ><img
+                src="img/icon-arrow.png"
+                alt=""
+                class="visible-sp"
+                width="56"
+                height="56"
+              />お問合せ</a
             >
           </li>
         </ul>
@@ -543,6 +1138,9 @@
           src="img/logo.webp"
           alt="アクアホライズン"
           class="header__logo footer__logo"
+          width="1396"
+          height="291"
+          loading="lazy"
         />
         <div class="header__address footer__address">
           <div class="header__address-detail footer__address-detail">

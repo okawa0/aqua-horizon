@@ -341,6 +341,329 @@ header {
   margin-right: 0.5em;
 }
 
+/* キーボード操作時のみフォーカスリングを表示する */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #00a0e9;
+  outline-offset: 2px;
+}
+
+/* ナビゲーションの現在地表示 */
+.nav-link {
+  position: relative;
+}
+/* SP: ハンバーガー内は左端のバーで示す */
+@media (max-width: 639.98px) {
+  .nav-link[aria-current="page"] {
+    color: #00a0e9;
+  }
+  .nav-link[aria-current="page"]::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 0.1em;
+    bottom: 0.1em;
+    width: 4px;
+    border-radius: 2px;
+    background-color: #00a0e9;
+  }
+}
+/* PC: タブ下の下線で示す。ラベルが折り返してもずれないよう
+   スライド式インジケーターではなく各タブの ::after を伸縮させる */
+@media (min-width: 640px) {
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: -0.5em;
+    height: 3px;
+    background-color: #00a0e9;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+  }
+  .nav-link:hover::after {
+    transform: scaleX(0.6);
+  }
+  .nav-link[aria-current="page"] {
+    color: #00a0e9;
+    font-weight: 700;
+  }
+  .nav-link[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+  /* フッターナビは青背景・白文字のため、下線と文字色を白で上書きする */
+  #global-nav-footer .nav-link::after {
+    background-color: #fff;
+    bottom: -0.3em;
+  }
+  #global-nav-footer .nav-link[aria-current="page"] {
+    color: #fff;
+  }
+}
+
+/* パネル切り替え */
+.panel[hidden] {
+  display: none;
+}
+.panel > .heading-ttl {
+  margin-top: 1rem;
+}
+@media (min-width: 640px) {
+  .panel > .heading-ttl {
+    margin-top: 2rem;
+  }
+}
+.panel.is-active {
+  animation: panel-in 0.22s ease-out;
+}
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.panel-placeholder {
+  margin-top: 1rem;
+  color: #aaa;
+}
+.panel-lead {
+  margin-block: 1rem;
+  line-height: 1.6;
+}
+/* パネル内の中見出し（h3） */
+.panel-subhead {
+  position: relative;
+  margin-top: 2.5rem;
+  padding-left: 0.9em;
+  font-size: 18px;
+}
+.panel-subhead::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 4px;
+  height: 1.1em;
+  transform: translateY(-50%);
+  background-color: #00a0e9;
+}
+
+/* ---------- 店舗パネル ---------- */
+.store-photo {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.info-list {
+  margin-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+.info-list__row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-block: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+@media (min-width: 640px) {
+  .info-list__row {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+.info-list dt {
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #00a0e9;
+}
+@media (min-width: 640px) {
+  .info-list dt {
+    width: 7em;
+  }
+}
+.info-list dd {
+  line-height: 1.6;
+}
+.info-list a {
+  color: #00a0e9;
+}
+.facility-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  list-style: none;
+}
+.facility-list li {
+  padding: 0.3em 1em;
+  border: 1px solid #00a0e9;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #00a0e9;
+  background-color: #fff;
+}
+.store-map {
+  margin-top: 1rem;
+  aspect-ratio: 16 / 9;
+}
+.store-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+
+/* ---------- コース一覧パネル ---------- */
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  list-style: none;
+}
+.course-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.course-card__img {
+  width: 100%;
+}
+.course-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem;
+}
+.course-card__catch {
+  font-size: 14px;
+  color: #666;
+}
+.course-card__title {
+  margin-top: 0.2rem;
+  font-size: 20px;
+  color: #00a0e9;
+}
+.course-card__text {
+  margin-top: 0.8rem;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.course-spec {
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}
+.course-spec__row {
+  display: flex;
+  gap: 0.8rem;
+  padding-block: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+.course-spec dt {
+  flex-shrink: 0;
+  width: 5.5em;
+  color: #888;
+}
+.course-spec dd {
+  font-weight: 700;
+}
+.course-spec__note {
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+}
+.course-card__link {
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 0.5em 1.2em;
+  border: 2px solid #00a0e9;
+  border-radius: 0.4rem;
+  background-color: #00a0e9;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.course-card__link:hover {
+  background-color: #fff;
+  color: #00a0e9;
+}
+
+/* ---------- スタッフパネル ---------- */
+.staff-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  list-style: none;
+}
+.staff-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 1.5rem 1rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  text-align: center;
+}
+.staff-card__img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.staff-card__body {
+  margin-top: 1rem;
+}
+.staff-card__role {
+  font-size: 13px;
+  color: #00a0e9;
+  font-weight: 700;
+}
+.staff-card__name {
+  margin-top: 0.3rem;
+  font-size: 20px;
+}
+.staff-card__kana {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+}
+.staff-card__cert {
+  margin-top: 0.6rem;
+  font-size: 13px;
+  color: #666;
+}
+.staff-card__comment {
+  margin-top: 0.8rem;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel.is-active {
+    animation: none;
+  }
+  .nav-link::after {
+    transition: none;
+  }
+  .subtitle-text {
+    animation: none;
+  }
+}
+
 .hero {
   background-color: #fff;
 }

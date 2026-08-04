@@ -25,6 +25,7 @@
     ></script>
     <script src="js/menu.js" defer></script>
     <script src="js/tab-nav.js" defer></script>
+    <script src="js/contact-form.js" defer></script>
   </head>
 
   <body>
@@ -854,11 +855,210 @@
           </div>
           <div id="panel-faq" class="panel" data-panel="faq">
             <h2 class="heading-ttl">よくあるご質問</h2>
-            <p class="panel-placeholder">（このセクションの内容は準備中です）</p>
+            <p class="panel-lead">
+              お問い合わせの多いご質問をまとめました。こちらで解決しない場合は、お気軽にお問い合わせください。
+            </p>
+            <div class="faq-list">
+              <details class="faq-item" name="faq">
+                <summary class="faq-summary">
+                  <span class="faq-badge faq-badge--q" aria-hidden="true">Q</span>
+                  <span class="faq-summary__text">泳げなくても参加できますか？</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <span class="faq-badge faq-badge--a" aria-hidden="true">A</span>
+                  <p class="faq-answer__text">はい、ご参加いただけます。体験ダイビングでは足の着く浅い場所から練習を始め、インストラクターが常に隣でサポートします。シュノーケリングではライフジャケットを着用しますので、泳げない方でも安心です。</p>
+                </div>
+              </details>
+              <details class="faq-item" name="faq">
+                <summary class="faq-summary">
+                  <span class="faq-badge faq-badge--q" aria-hidden="true">Q</span>
+                  <span class="faq-summary__text">持ち物は何が必要ですか？</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <span class="faq-badge faq-badge--a" aria-hidden="true">A</span>
+                  <p class="faq-answer__text">水着・タオル・着替えをお持ちください。ウェットスーツ、マスク、フィン、タンクなどの器材はすべて料金に含まれています。コンタクトレンズをご使用の方は、予備をお持ちいただくと安心です。</p>
+                </div>
+              </details>
+              <details class="faq-item" name="faq">
+                <summary class="faq-summary">
+                  <span class="faq-badge faq-badge--q" aria-hidden="true">Q</span>
+                  <span class="faq-summary__text">予約の変更・キャンセルはできますか？</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <span class="faq-badge faq-badge--a" aria-hidden="true">A</span>
+                  <p class="faq-answer__text">前日までのご連絡であれば、変更・キャンセルともに無料で承ります。当日のキャンセルは料金の50%、無連絡不参加の場合は100%のキャンセル料を申し受けます。</p>
+                </div>
+              </details>
+              <details class="faq-item" name="faq">
+                <summary class="faq-summary">
+                  <span class="faq-badge faq-badge--q" aria-hidden="true">Q</span>
+                  <span class="faq-summary__text">雨の日でも開催されますか？</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <span class="faq-badge faq-badge--a" aria-hidden="true">A</span>
+                  <p class="faq-answer__text">雨天でも海中の透明度は大きく変わらないため、原則として開催します。ただし強風や高波などで安全を確保できないと判断した場合は中止とし、料金は全額返金いたします。</p>
+                </div>
+              </details>
+              <details class="faq-item" name="faq">
+                <summary class="faq-summary">
+                  <span class="faq-badge faq-badge--q" aria-hidden="true">Q</span>
+                  <span class="faq-summary__text">年齢制限はありますか？</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <span class="faq-badge faq-badge--a" aria-hidden="true">A</span>
+                  <p class="faq-answer__text">体験ダイビングは10歳以上、シュノーケリングは6歳以上からご参加いただけます。年齢の上限は設けていませんが、健康状態によっては医師の診断書をお願いする場合があります。</p>
+                </div>
+              </details>
+              <details class="faq-item" name="faq">
+                <summary class="faq-summary">
+                  <span class="faq-badge faq-badge--q" aria-hidden="true">Q</span>
+                  <span class="faq-summary__text">送迎はありますか？</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <span class="faq-badge faq-badge--a" aria-hidden="true">A</span>
+                  <p class="faq-answer__text">那覇市内の宿泊施設であれば無料で送迎いたします。ご予約時に宿泊先をお知らせください。市外の場合も対応できることがありますので、お気軽にご相談ください。</p>
+                </div>
+              </details>
+              <details class="faq-item" name="faq">
+                <summary class="faq-summary">
+                  <span class="faq-badge faq-badge--q" aria-hidden="true">Q</span>
+                  <span class="faq-summary__text">カメラの持ち込みはできますか？</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <span class="faq-badge faq-badge--a" aria-hidden="true">A</span>
+                  <p class="faq-answer__text">防水仕様のカメラであればお持ち込みいただけます。また、スタッフによる水中写真の撮影サービス（無料）もご用意していますので、手ぶらでも思い出を残していただけます。</p>
+                </div>
+              </details>
+              <details class="faq-item" name="faq">
+                <summary class="faq-summary">
+                  <span class="faq-badge faq-badge--q" aria-hidden="true">Q</span>
+                  <span class="faq-summary__text">ライセンスがなくても潜れますか？</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <span class="faq-badge faq-badge--a" aria-hidden="true">A</span>
+                  <p class="faq-answer__text">体験ダイビングはライセンス不要でご参加いただけます。より深いポイントや長時間のダイビングをご希望の場合は、2日間のライセンス講習もご案内しています。</p>
+                </div>
+              </details>
+            </div>
           </div>
           <div id="panel-contact" class="panel" data-panel="contact">
             <h2 class="heading-ttl">お問合せ</h2>
-            <p class="panel-placeholder">（このセクションの内容は準備中です）</p>
+            <p class="panel-lead">
+              コースのご相談・ご予約は、下記フォームまたはお電話（<a
+                href="tel:0981234567"
+                class="panel-lead__tel"
+                >098-123-4567</a
+              >）からお気軽にどうぞ。<br />2営業日以内にご返信いたします。
+            </p>
+            <p class="form-note">
+              ※こちらはポートフォリオ用のデモフォームです。送信内容はどこにも保存・送信されません。
+            </p>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-row">
+                <label class="form-label" for="cf-name"
+                  >お名前<span class="form-required">必須</span></label
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  id="cf-name"
+                  name="name"
+                  autocomplete="name"
+                  maxlength="50"
+                  required
+                />
+                <p class="form-error" id="cf-name-error" hidden></p>
+              </div>
+
+              <div class="form-row">
+                <label class="form-label" for="cf-email"
+                  >メールアドレス<span class="form-required">必須</span></label
+                >
+                <input
+                  class="form-control"
+                  type="email"
+                  id="cf-email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+                <p class="form-error" id="cf-email-error" hidden></p>
+              </div>
+
+              <div class="form-row">
+                <label class="form-label" for="cf-tel">電話番号</label>
+                <input
+                  class="form-control"
+                  type="tel"
+                  id="cf-tel"
+                  name="tel"
+                  autocomplete="tel"
+                  inputmode="tel"
+                />
+                <p class="form-error" id="cf-tel-error" hidden></p>
+              </div>
+
+              <div class="form-row">
+                <label class="form-label" for="cf-course">希望コース</label>
+                <select class="form-control" id="cf-course" name="course">
+                  <option value="">選択してください</option>
+                  <option value="入門コース">入門コース</option>
+                  <option value="青の洞窟コース">青の洞窟コース</option>
+                  <option value="1日フリーコース">1日フリーコース</option>
+                  <option value="シュノーケリング体験">
+                    シュノーケリング体験
+                  </option>
+                  <option value="ボートファンダイビング">
+                    ボートファンダイビング
+                  </option>
+                  <option value="サンゴ礁ウォッチング">
+                    サンゴ礁ウォッチング
+                  </option>
+                  <option value="未定・相談したい">未定・相談したい</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label class="form-label" for="cf-date">希望日</label>
+                <input
+                  class="form-control"
+                  type="date"
+                  id="cf-date"
+                  name="date"
+                />
+                <p class="form-error" id="cf-date-error" hidden></p>
+              </div>
+
+              <div class="form-row">
+                <label class="form-label" for="cf-message"
+                  >お問い合わせ内容<span class="form-required">必須</span></label
+                >
+                <textarea
+                  class="form-control form-control--textarea"
+                  id="cf-message"
+                  name="message"
+                  rows="6"
+                  maxlength="1000"
+                  required
+                ></textarea>
+                <p class="form-error" id="cf-message-error" hidden></p>
+              </div>
+
+              <button type="submit" class="form-submit">送信する</button>
+            </form>
+
+            <p class="form-success" id="contact-success" tabindex="-1" hidden>
+              お問い合わせありがとうございます。<br />2営業日以内に担当者よりご返信いたします。
+            </p>
           </div>
         </div>
         <aside class="sidebar">
